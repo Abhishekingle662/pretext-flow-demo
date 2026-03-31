@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pretext — The Age of AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Pretext <span class="tag">layoutNextLine</span></h1>
+      <p class="subtitle">
+        Text reflows around the GIF in real time using <code>layoutNextLine()</code> —
+        each line receives a different <code>maxWidth</code> based on whether it overlaps
+        the GIF. Drag the GIF anywhere. Drag its right edge to resize. No DOM measurements.
+      </p>
+    </header>
+
+    <div class="controls">
+      <span class="hint">✦ Drag the GIF anywhere &nbsp;·&nbsp; Drag its right edge to resize</span>
+    </div>
+
+    <div class="card">
+      <div class="article-header">
+        <p class="article-kicker">Technology &amp; Society</p>
+        <h2 class="article-title">The Age of Artificial Intelligence</h2>
+        <p class="article-byline">A look at how machine learning is reshaping the world</p>
+      </div>
+      <div id="container" class="text-container">
+        <!-- GIF wrapper — position set by JS -->
+        <div id="gifWrapper" class="gif-wrapper">
+          <img
+            id="gifEl"
+            src="https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif"
+            alt="AI robot animation"
+            draggable="false"
+          />
+          <div id="resizeHandle" class="resize-handle"></div>
+        </div>
+        <!-- Text lines injected by JS -->
+        <div id="linesContainer" class="lines-container"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Powered by <a href="https://github.com/chenglou/pretext" target="_blank">@chenglou/pretext</a>
+    </footer>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
